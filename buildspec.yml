@@ -22,7 +22,7 @@ phases:
       - echo Build ended on $(date +%Y-%m-%d--%H:%m:%S)
 artifacts:
   files:
-    # - location
+    - 'build/*'
     # - location
   #discard-paths: yes
   #base-directory: location
