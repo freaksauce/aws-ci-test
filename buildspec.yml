@@ -7,11 +7,11 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build started on `date`
+      - echo Build started on $(date +%Y-%m-%d %H:%i%s) 
       - npm test
   post_build:
     commands:
-      - echo Build ended on `date`
+      - echo Build ended on $(date +%Y-%m-%d %H:%i%s)
 #artifacts:
   #files:
     # - location
