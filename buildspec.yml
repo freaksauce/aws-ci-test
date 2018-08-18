@@ -9,15 +9,19 @@ phases:
     commands:
       - echo Installing dependencies
       - npm install
+  pre-build:
+    commands:
+      - echo Run unit tests
+      - npm test
   build:
     commands:
       - echo Build started on $(date +%Y-%m-%d--%H:%m:%S)
-      - npm test
+      - npm run build
   post_build:
     commands:
       - echo Build ended on $(date +%Y-%m-%d--%H:%m:%S)
-#artifacts:
-  #files:
+artifacts:
+  files:
     # - location
     # - location
   #discard-paths: yes
